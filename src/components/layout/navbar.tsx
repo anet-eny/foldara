@@ -18,7 +18,7 @@ export function Navbar() {
             className="text-2xl font-semibold tracking-tight text-[var(--color-text)]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Foldara
+            Fold<span className="text-[var(--color-gold)]">ara</span>
           </span>
         </a>
 
