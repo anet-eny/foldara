@@ -1,3 +1,210 @@
 @import "tailwindcss";
 
+:root {
+  /* =====================
+     COLORS
+  ===================== */
+  --color-bg:           oklch(0.14 0.04 255);
+  --color-surface:      oklch(0.19 0.04 255);
+  --color-surface-2:    oklch(0.23 0.04 255);
+  --color-border:       oklch(0.30 0.05 255);
 
+  --color-text:         oklch(0.93 0.01 255);
+  --color-text-muted:   oklch(0.55 0.03 255);
+
+  --color-gold:         oklch(0.76 0.14 85);
+  --color-gold-light:   oklch(0.86 0.09 85);
+  --color-orange:       oklch(0.68 0.17 48);
+  --color-rose:         oklch(0.65 0.16 15);
+  --color-blue:         oklch(0.55 0.16 255);
+
+  /* =====================
+     FONTS
+  ===================== */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* =====================
+     SPACING & LAYOUT
+  ===================== */
+  --spacing-section: 7rem;
+  --spacing-section-sm: 4rem;
+
+  /* =====================
+     BORDER RADIUS
+  ===================== */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  16px;
+  --radius-pill: 9999px;
+}
+
+/* =====================
+   BASE STYLES
+===================== */
+@layer base {
+  html {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    line-height: 1.15;
+    color: var(--color-text);
+  }
+
+  h1 { font-size: clamp(2.4rem, 5vw, 4rem);   font-weight: 600; }
+  h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 600; }
+  h3 { font-size: clamp(1.2rem, 2vw, 1.6rem);  font-weight: 500; }
+
+  p {
+    color: var(--color-text-muted);
+    max-width: 65ch;
+  }
+
+  a {
+    color: var(--color-gold);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--color-gold-light);
+  }
+}
+
+/* =====================
+   UTILITIES
+===================== */
+@layer utilities {
+
+  /* Typography */
+  .text-gradient {
+    background: linear-gradient(
+      135deg,
+      var(--color-gold) 0%,
+      var(--color-orange) 50%,
+      var(--color-rose) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-gold);
+  }
+
+  /* Layout */
+  .section-padding {
+    padding-block: var(--spacing-section);
+  }
+
+  .container-wide {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  .container-narrow {
+    width: 100%;
+    max-width: 720px;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 5vw, 4rem);
+  }
+
+  /* Buttons */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-gold);
+    color: oklch(0.14 0.04 255);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: var(--radius-pill);
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-gold-light);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background-color: transparent;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--color-border);
+    transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateY(-1px);
+  }
+
+  /* Cards */
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
+
+  .card-hover {
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .card-hover:hover {
+    border-color: var(--color-gold);
+    transform: translateY(-2px);
+  }
+
+  /* Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Subtle background glow (dekorativní, pro hero sekci) */
+  .glow-gold {
+    position: relative;
+  }
+
+  .glow-gold::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 60% 40% at 50% 0%,
+      oklch(0.76 0.14 85 / 0.08) 0%,
+      transparent 70%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+}
