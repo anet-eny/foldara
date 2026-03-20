@@ -1,0 +1,7 @@
+---
+alwaysApply: true
+---
+
+Match complexity to the project scope. This is a learning project / small marketing site — 
+prefer simple, readable solutions over production-grade patterns like compound components, 
+union types, or factory functions unless explicitly asked.
