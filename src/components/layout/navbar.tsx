@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export function Navbar() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-[var(--color-border)] bg-[var(--color-bg)]">
-      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between px-2 py-[0.5rem] sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-2 py-[0.5rem] sm:px-6 lg:px-8">
         {/* Logo + brand */}
         <a href="#" className="flex items-center gap-3">
           <Image
