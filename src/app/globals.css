@@ -10,6 +10,7 @@
   --color-border:       oklch(0.30 0.05 255);
 
   --color-text:         oklch(0.93 0.01 255);
+  --color-text-secondary: oklch(0.72 0.03 255);
   --color-text-muted:   oklch(0.55 0.03 255);
 
   --color-gold:         oklch(0.76 0.14 85);
@@ -102,6 +103,15 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-gold);
+  }
+
+  /* Navbar links (override global `a { color: ... }`) */
+  .nav-link a {
+    color: var(--color-text-secondary);
+  }
+
+  .nav-link a:hover {
+    color: var(--color-text);
   }
 
   /* Layout */
