@@ -81,7 +81,7 @@ docs/
 - [x] Project scaffolding (Next.js 15, TypeScript, Tailwind v4)
 - [x] globals.css – theme, base styles, utilities
 - [x] layout.tsx – fonts, metadata
-- [ ] ui/button.tsx
-- [ ] components/layout/navbar.tsx
+- [x] ui/button.tsx
+- [x] components/layout/navbar.tsx
 - [ ] sections/hero.tsx
 - [ ] ...
