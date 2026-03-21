@@ -61,7 +61,7 @@
     color: var(--color-brand-text);
   }
 
-  h1 { font-size: clamp(2.4rem, 5vw, 4rem);   font-weight: 600; }
+  h1 { font-size: clamp(2.8rem, 6vw, 5.2rem);   font-weight: 600; }
   h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 600; }
   h3 { font-size: clamp(1.2rem, 2vw, 1.6rem);  font-weight: 500; }
 
@@ -102,7 +102,11 @@
     color: var(--color-gold);
   }
 
-  /* Navbar links (override global `a { color: ... }`) */
+  /* Navbar */
+  .navbar-bg {
+    background-color: oklch(0.14 0.04 255 / 0.7);
+    backdrop-filter: blur(16px);
+  }
   .nav-link a {
     color: var(--color-brand-text-secondary);
   }
@@ -162,7 +166,7 @@
     font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
-    border-radius: var(--radius-pill);
+    border-radius: var(--radius-md);
     border: 1px solid var(--color-brand-border);
     transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
     cursor: pointer;
