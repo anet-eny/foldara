@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   /* =====================
      COLORS
   ===================== */
-  --color-bg:           oklch(0.14 0.04 255);
-  --color-surface:      oklch(0.19 0.04 255);
-  --color-surface-2:    oklch(0.23 0.04 255);
-  --color-border:       oklch(0.30 0.05 255);
+  --color-brand-bg:           oklch(0.14 0.04 255);
+  --color-brand-surface:      oklch(0.19 0.04 255);
+  --color-brand-surface-2:    oklch(0.23 0.04 255);
+  --color-brand-border:       oklch(0.30 0.05 255);
 
-  --color-text:         oklch(0.93 0.01 255);
-  --color-text-secondary: oklch(0.72 0.03 255);
-  --color-text-muted:   oklch(0.55 0.03 255);
+  --color-brand-text:         oklch(0.93 0.01 255);
+  --color-brand-text-secondary: oklch(0.72 0.03 255);
+  --color-brand-text-muted:   oklch(0.55 0.03 255);
 
   --color-gold:         oklch(0.76 0.14 85);
   --color-gold-light:   oklch(0.86 0.09 85);
@@ -45,8 +45,8 @@
 ===================== */
 @layer base {
   html {
-    background-color: var(--color-bg);
-    color: var(--color-text);
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
     font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
@@ -56,7 +56,7 @@
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
     line-height: 1.15;
-    color: var(--color-text);
+    color: var(--color-brand-text);
   }
 
   h1 { font-size: clamp(2.4rem, 5vw, 4rem);   font-weight: 600; }
@@ -64,7 +64,7 @@
   h3 { font-size: clamp(1.2rem, 2vw, 1.6rem);  font-weight: 500; }
 
   p {
-    color: var(--color-text-muted);
+    color: var(--color-brand-text-muted);
     max-width: 65ch;
   }
 
@@ -107,11 +107,11 @@
 
   /* Navbar links (override global `a { color: ... }`) */
   .nav-link a {
-    color: var(--color-text-secondary);
+    color: var(--color-brand-text-secondary);
   }
 
   .nav-link a:hover {
-    color: var(--color-text);
+    color: var(--color-brand-text);
   }
 
   /* Layout */
@@ -166,12 +166,12 @@
     gap: 0.5rem;
     padding: 0.75rem 1.75rem;
     background-color: transparent;
-    color: var(--color-text);
+    color: var(--color-brand-text);
     font-family: var(--font-body);
     font-size: 0.95rem;
     font-weight: 500;
     border-radius: var(--radius-pill);
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-brand-border);
     transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
     cursor: pointer;
   }
@@ -184,8 +184,8 @@
 
   /* Cards */
   .card {
-    background-color: var(--color-surface);
-    border: 1px solid var(--color-border);
+    background-color: var(--color-brand-surface);
+    border: 1px solid var(--color-brand-border);
     border-radius: var(--radius-lg);
     padding: 2rem;
   }
@@ -202,7 +202,7 @@
   /* Divider */
   .divider {
     border: none;
-    border-top: 1px solid var(--color-border);
+    border-top: 1px solid var(--color-brand-border);
   }
 
   /* Subtle background glow (dekorativní, pro hero sekci) */
