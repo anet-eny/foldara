@@ -151,8 +151,11 @@
 
   /* Layout */
   .section-padding {
-    padding-top: var(--spacing-section-top);
-    padding-bottom: var(--spacing-section-bottom);
+    padding-block: var(--spacing-section-sm);
+  }
+
+  .hero-section-padding {
+    padding-block: var(--spacing-section-top) var(--spacing-section-bottom);
   }
 
   .container-wide {
