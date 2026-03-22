@@ -30,7 +30,8 @@
   /* =====================
      SPACING & LAYOUT
   ===================== */
-  --spacing-section: 7rem;
+  --spacing-section-top: 8rem;
+  --spacing-section-bottom: 4rem;
   --spacing-section-sm: 4rem;
 
   /* =====================
@@ -150,7 +151,8 @@
 
   /* Layout */
   .section-padding {
-    padding-block: var(--spacing-section);
+    padding-top: var(--spacing-section-top);
+    padding-bottom: var(--spacing-section-bottom);
   }
 
   .container-wide {
