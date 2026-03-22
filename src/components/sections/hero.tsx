@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
+import { SectionLabel } from "@/components/ui/section-label";
 
 export function Hero() {
   return (
     <section id="home" className="glow-gold section-padding bg-brand-bg">
       <div className="container-wide relative z-1 flex flex-col justify-center items-center text-center gap-12">
         <div className="space-y-6">
+          <SectionLabel>Next-gen protein engineering</SectionLabel>
           <h1>
             Where <span className="text-gradient">biology</span> meets
             <br />
