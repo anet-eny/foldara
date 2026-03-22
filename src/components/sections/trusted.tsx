@@ -10,7 +10,7 @@ export function Trusted() {
   return (
     <section className="section-padding">
       <div className="container-wide flex flex-col items-center text-center">
-        <p className="label mb-8">Trusted by researchers at</p>
+        <p className="label mb-8" style={{ color: "var(--color-brand-text-muted)" }}>Trusted by researchers at</p>
         <div className="flex flex-row flex-wrap justify-center gap-12">
           {COMPANIES.map((name) => (
             <span
