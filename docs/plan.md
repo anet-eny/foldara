@@ -31,7 +31,9 @@ No additional pages yet.
 ## Sections (from prototype)
 1. Navbar – logo + navigation links
 2. Hero – main headline, subheadline, "Request Access" CTA button
-3. [to be continued in the next task]
+3. Trusted component
+4. Platform and Card components
+5. ...
 
 ## File structure
 src/
@@ -55,6 +57,7 @@ src/
 
     sections/                       – sekce landing page (v pořadí)
       hero.tsx
+      trusted.tsx
       platform.tsx                  – scroll target přes id
       how-it-works.tsx              – scroll target přes id
       features.tsx
@@ -83,5 +86,5 @@ docs/
 - [x] layout.tsx – fonts, metadata
 - [x] ui/button.tsx
 - [x] components/layout/navbar.tsx
-- [ ] sections/hero.tsx
-- [ ] ...
+- [x] sections/hero.tsx
+- [ ] sections/trusted.tsx
