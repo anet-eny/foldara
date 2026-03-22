@@ -100,7 +100,7 @@
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--color-gold);
+    color: var(--color-brand-text-muted);
   }
 
   /* Section label pill + pulsing dot (from docs/prototype.html .hero-badge / ::before + @keyframes pulse) */
