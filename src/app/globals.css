@@ -103,11 +103,6 @@
     color: var(--color-gold);
   }
 
-  /* Section label pill + pulsing dot (from docs/prototype.html .hero-badge / ::before + @keyframes pulse) */
-  @keyframes section-label-pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.7); }
-  }
 
   .section-label {
     display: inline-flex;
@@ -266,13 +261,41 @@
     pointer-events: none;
     z-index: 0;
   }
+}
 
+/* =====================
+   ANIMATIONS
+===================== */
+@layer animations {
+  /* Section label pill + pulsing dot (from docs/prototype.html .hero-badge / ::before + @keyframes pulse) */
+  @keyframes section-label-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  /* Floating animation (from docs/prototype.html .floating + @keyframes float) */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-12px); }
   }
-
   .floating {
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Reveal animation (from docs/prototype.html .reveal + @keyframes reveal-up) */
+  @keyframes reveal-up {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .reveal {
+    animation: reveal-up 0.7s ease both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
   }
 }
