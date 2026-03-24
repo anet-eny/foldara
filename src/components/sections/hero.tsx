@@ -21,7 +21,7 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4 justify-center fade-up-4">
             <Button href="#platform">Explore the platform</Button>
-            <Button href="#process" variant="outline">
+            <Button href="#how-it-works" variant="outline">
               See how it works
             </Button>
           </div>
