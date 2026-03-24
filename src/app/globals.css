@@ -262,6 +262,52 @@
     pointer-events: none;
     z-index: 0;
   }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    gap: 0 4rem;
+  }
+
+  .steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 1.5rem;
+    left: calc(16.66% + 1rem);
+    right: calc(16.66% + 1rem);
+    height: 1px;
+    background: linear-gradient(90deg, var(--color-gold), var(--color-orange), var(--color-gold));
+    opacity: 0.3;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background-color: var(--color-brand-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .stat {
+    background-color: var(--color-brand-surface);
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    background: var(--gradient-brand);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* =====================
