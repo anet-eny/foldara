@@ -262,11 +262,6 @@
     pointer-events: none;
     z-index: 0;
   }
-
-  .fade-up-1 { animation: fadeUp 0.8s ease both; }
-  .fade-up-2 { animation: fadeUp 0.8s 0.15s ease both; }
-  .fade-up-3 { animation: fadeUp 0.8s 0.3s ease both; }
-  .fade-up-4 { animation: fadeUp 0.8s 0.45s ease both; }
 }
 
 /* =====================
@@ -277,6 +272,11 @@
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
+  .fade-up-1 { animation: fadeUp 0.8s ease both; }
+  .fade-up-2 { animation: fadeUp 0.8s 0.15s ease both; }
+  .fade-up-3 { animation: fadeUp 0.8s 0.3s ease both; }
+  .fade-up-4 { animation: fadeUp 0.8s 0.45s ease both; }
 
   /* Section label pill + pulsing dot (from docs/prototype.html .hero-badge / ::before + @keyframes pulse) */
   @keyframes section-label-pulse {
