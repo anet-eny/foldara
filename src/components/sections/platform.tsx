@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import {
   Dna,
   FlaskConical,
@@ -10,6 +9,7 @@ import {
   Handshake,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useReveal } from "@/hooks/useReveal";
 
 const features = [
   {
@@ -51,25 +51,7 @@ const features = [
 ] as const;
 
 export function Platform() {
-  useEffect(() => {
-    const section = document.getElementById("platform");
-    if (!section) return;
-
-    const elements = section.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.15 },
-    );
-
-    elements.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  useReveal();
 
   return (
     <section id="platform" className="section-padding">
