@@ -283,20 +283,15 @@
     animation: float 6s ease-in-out infinite;
   }
 
-  /* Reveal animation (from docs/prototype.html .reveal + @keyframes reveal-up) */
-  @keyframes reveal-up {
-    from {
-      opacity: 0;
-      transform: translateY(32px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  /* Reveal (from docs/prototype.html — transition + .visible; driven by IntersectionObserver in platform.tsx) */
   .reveal {
-    animation: reveal-up 0.7s ease both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 30%;
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

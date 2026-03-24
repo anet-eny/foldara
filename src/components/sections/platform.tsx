@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import {
   Dna,
   FlaskConical,
@@ -48,6 +51,26 @@ const features = [
 ] as const;
 
 export function Platform() {
+  useEffect(() => {
+    const section = document.getElementById("platform");
+    if (!section) return;
+
+    const elements = section.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section id="platform" className="section-padding">
       <div className="container-wide space-y-6">
