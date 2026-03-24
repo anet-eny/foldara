@@ -59,7 +59,7 @@ export function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.num}
-              className="reveal flex flex-col items-center text-center"
+              className="reveal flex flex-col items-center text-center px-8"
             >
               <div
                 className="relative z-1 inline-flex h-12 w-12 items-center justify-center rounded-full font-heading text-sm font-bold text-brand-bg"

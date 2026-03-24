@@ -267,7 +267,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: relative;
-    gap: 0 4rem;
   }
 
   .steps-grid::before {
@@ -293,7 +292,7 @@
 
   .stat {
     background-color: var(--color-brand-surface);
-    padding: 2.5rem;
+    padding: 4rem;
     text-align: center;
   }
 
