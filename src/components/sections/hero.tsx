@@ -6,20 +6,20 @@ export function Hero() {
     <section id="home" className="glow-gold hero-section-padding bg-brand-bg">
       <div className="container-wide relative z-1 flex flex-col justify-center items-center text-center gap-12">
         <div className="space-y-6">
-          <SectionLabel>Next-gen protein engineering</SectionLabel>
-          <h1>
+          <SectionLabel className="fade-up-1">Next-gen protein engineering</SectionLabel>
+          <h1 className="fade-up-2">
             Where <span className="text-gradient">biology</span> meets
             <br />
             computational precision
           </h1>
 
-          <p className="mx-auto">
+          <p className="mx-auto fade-up-3">
             Foldara combines AI-driven protein structure prediction with advanced
             bioinformatics pipelines - accelerating discovery from sequence to
             function.
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-wrap gap-4 justify-center fade-up-4">
             <Button href="#platform">Explore the platform</Button>
             <Button href="#process" variant="outline">
               See how it works
@@ -27,12 +27,13 @@ export function Hero() {
           </div>
         </div>
 
-        <svg
-          className="floating mx-auto h-auto w-full max-w-[900px] block"
-          viewBox="0 0 700 320"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <div className="floating mx-auto h-auto w-full max-w-[900px] block">
+          <svg
+            className="fade-up-4 h-auto w-full block"
+            viewBox="0 0 700 320"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <ellipse cx="350" cy="160" rx="300" ry="120" fill="url(#heroGlow)" opacity="0.3" />
 
             <path
@@ -150,7 +151,8 @@ export function Hero() {
                 <stop offset="100%" stopColor="#8fa8cc" />
               </linearGradient>
             </defs>
-        </svg>
+          </svg>
+        </div>
       </div>
     </section>
   );
