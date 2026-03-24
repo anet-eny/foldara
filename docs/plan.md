@@ -33,7 +33,9 @@ No additional pages yet.
 2. Hero – main headline, subheadline, "Request Access" CTA button
 3. Trusted component
 4. Platform and Card components
-5. ...
+5. How it works
+6. Get started
+7. Footer
 
 ## File structure
 src/
@@ -87,4 +89,6 @@ docs/
 - [x] ui/button.tsx
 - [x] components/layout/navbar.tsx
 - [x] sections/hero.tsx
-- [ ] sections/trusted.tsx
+- [x] sections/trusted.tsx
+- [x] sections/platform.tsx
+- [ ] sections/how-it-works.tsx
