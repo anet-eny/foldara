@@ -42,7 +42,7 @@ export function HowItWorks() {
   useReveal();
 
   return (
-    <section id="how-it-works" className="section-padding">
+    <section id="how-it-works" className="section-padding bg-brand-surface">
       <div className="container-wide space-y-6">
         <p className="reveal label">How it works</p>
         <h2 className="reveal font-heading">

@@ -291,7 +291,7 @@
   }
 
   .stat {
-    background-color: var(--color-brand-surface);
+    background-color: var(--color-brand-surface-2);
     padding: 4rem;
     text-align: center;
   }
