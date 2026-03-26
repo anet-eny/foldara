@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-brand-border bg-[oklch(0.14_0.04_255/0.7)] backdrop-blur-[16px]">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-brand-border bg-brand-bg/70 backdrop-blur-lg">
       <div className="mx-auto flex w-full items-center justify-between px-2 py-2 sm:px-6 lg:px-8">
         {/* Logo + brand */}
         <a href="#" className="flex items-center gap-3">
@@ -67,4 +67,3 @@ export function Navbar() {
     </nav>
   );
 }
-
