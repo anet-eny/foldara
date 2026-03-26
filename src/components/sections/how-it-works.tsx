@@ -58,7 +58,7 @@ export function HowItWorks() {
         <div className="relative mt-10 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-6">
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute top-[1.5rem] right-[calc(16.66%+1rem)] left-[calc(16.66%+1rem)] hidden h-px bg-[linear-gradient(90deg,var(--color-gold),var(--color-orange),var(--color-gold))] opacity-30 md:block"
+            className="pointer-events-none absolute top-6 right-[calc(16.66%+1rem)] left-[calc(16.66%+1rem)] hidden h-px bg-[linear-gradient(90deg,var(--color-gold),var(--color-orange),var(--color-gold))] opacity-30 md:block"
           />
           {steps.map((step) => (
             <div
