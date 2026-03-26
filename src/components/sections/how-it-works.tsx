@@ -55,11 +55,15 @@ export function HowItWorks() {
           validated protein designs.
         </p>
 
-        <div className="steps-grid">
+        <div className="relative mt-10 grid grid-cols-1 gap-10 md:grid-cols-3 md:gap-6">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute top-[1.5rem] right-[calc(16.66%+1rem)] left-[calc(16.66%+1rem)] hidden h-px bg-[linear-gradient(90deg,var(--color-gold),var(--color-orange),var(--color-gold))] opacity-30 md:block"
+          />
           {steps.map((step) => (
             <div
               key={step.num}
-              className="reveal flex flex-col items-center text-center px-8"
+              className="reveal relative flex flex-col items-center text-center px-4 md:px-6 lg:px-8"
             >
               <div
                 className="relative z-1 inline-flex h-12 w-12 items-center justify-center rounded-full font-heading text-sm font-bold text-brand-bg"
@@ -75,13 +79,21 @@ export function HowItWorks() {
           ))}
         </div>
 
-        <div className="stats-grid reveal">
-          {stats.map((stat) => (
-            <div key={stat.label} className="stat">
-              <div className="stat-value">{stat.value}</div>
-              <p className="mt-2 text-sm text-brand-text-muted">{stat.label}</p>
-            </div>
-          ))}
+        <div className="reveal mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-lg bg-brand-border sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+        {stats.map((stat, index) => {
+  const isLastOdd = stats.length % 2 === 1 && index === stats.length - 1;
+  return (
+    <div
+      key={stat.label}
+      className={`bg-brand-surface-2 px-6 py-8 text-center sm:px-8 sm:py-10 lg:px-12 lg:py-14 ${isLastOdd ? "sm:col-span-2 lg:col-span-1" : ""}`}
+    >
+      <div className="stat-value">{stat.value}</div>
+      <p className="w-full max-w-none text-sm leading-relaxed text-brand-text-muted sm:text-base">
+        {stat.label}
+      </p>
+    </div>
+  );
+})}
         </div>
       </div>
     </section>
