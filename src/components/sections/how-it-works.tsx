@@ -74,26 +74,29 @@ export function HowItWorks() {
               <h3 className="mt-6 mb-2 font-heading font-semibold">
                 {step.title}
               </h3>
-              <p className="text-sm text-brand-text-muted">{step.description}</p>
+              <p className="text-sm text-brand-text-muted">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="reveal mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-lg bg-brand-border sm:grid-cols-2 lg:mt-16 lg:grid-cols-3">
-        {stats.map((stat, index) => {
-  const isLastOdd = stats.length % 2 === 1 && index === stats.length - 1;
-  return (
-    <div
-      key={stat.label}
-      className={`bg-brand-surface-2 px-6 py-8 text-center sm:px-8 sm:py-10 lg:px-12 lg:py-14 ${isLastOdd ? "sm:col-span-2 lg:col-span-1" : ""}`}
-    >
-      <div className="stat-value">{stat.value}</div>
-      <p className="w-full max-w-none text-sm leading-relaxed text-brand-text-muted sm:text-base">
-        {stat.label}
-      </p>
-    </div>
-  );
-})}
+          {stats.map((stat, index) => {
+            const isLastOdd =
+              stats.length % 2 === 1 && index === stats.length - 1;
+            return (
+              <div
+                key={stat.label}
+                className={`bg-brand-surface-2 px-6 py-8 text-center sm:px-8 sm:py-10 lg:px-12 lg:py-14 ${isLastOdd ? "sm:col-span-2 lg:col-span-1" : ""}`}
+              >
+                <div className="stat-value">{stat.value}</div>
+                <p className="w-full max-w-none text-sm leading-relaxed text-brand-text-muted sm:text-base">
+                  {stat.label}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
