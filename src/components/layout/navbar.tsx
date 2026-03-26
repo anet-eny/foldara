@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 export function Navbar() {
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-brand-border navbar-bg">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-brand-border bg-[oklch(0.14_0.04_255/0.7)] backdrop-blur-[16px]">
       <div className="mx-auto flex w-full items-center justify-between px-2 py-2 sm:px-6 lg:px-8">
         {/* Logo + brand */}
         <a href="#" className="flex items-center gap-3">
@@ -24,18 +24,38 @@ export function Navbar() {
 
         {/* Nav links + CTA (desktop only) */}
         <div className="flex items-center gap-10">
-          <ul className="hidden items-center gap-10 text-sm md:flex nav-link">
+          <ul className="hidden items-center gap-10 text-sm md:flex">
             <li>
-              <a href="#platform">Platform</a>
+              <a
+                href="#platform"
+                className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
+              >
+                Platform
+              </a>
             </li>
             <li>
-              <a href="#how-it-works">How it works</a>
+              <a
+                href="#how-it-works"
+                className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
+              >
+                How it works
+              </a>
             </li>
             <li>
-              <a href="#research">Research</a>
+              <a
+                href="#research"
+                className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
+              >
+                Research
+              </a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a
+                href="#about"
+                className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
+              >
+                About
+              </a>
             </li>
           </ul>
 

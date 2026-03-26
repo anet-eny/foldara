@@ -131,19 +131,6 @@
     animation: section-label-pulse 2s infinite;
   }
 
-  /* Navbar */
-  .navbar-bg {
-    background-color: oklch(0.14 0.04 255 / 0.7);
-    backdrop-filter: blur(16px);
-  }
-  .nav-link a {
-    color: var(--color-brand-text-secondary);
-  }
-
-  .nav-link a:hover {
-    color: var(--color-brand-text);
-  }
-
   /* Layout */
   .section-padding {
     padding-block: var(--spacing-section-sm);
@@ -165,78 +152,6 @@
     max-width: 720px;
     margin-inline: auto;
     padding-inline: clamp(1.5rem, 5vw, 4rem);
-  }
-
-  /* Buttons */
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    background: var(--gradient-brand);
-    color: oklch(0.14 0.04 255);
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 600;
-    border-radius: var(--radius-md);
-    transition: background-color 0.2s ease, transform 0.15s ease;
-    cursor: pointer;
-    border: none;
-  }
-
-  .btn-primary:hover {
-    opacity: 0.8;
-    transform: translateY(-1px);
-  }
-
-  .btn-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.75rem;
-    background-color: transparent;
-    color: var(--color-brand-text);
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-    font-weight: 500;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-brand-border);
-    transition: border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
-    cursor: pointer;
-  }
-
-  .btn-outline:hover {
-    border-color: var(--color-gold);
-    color: var(--color-gold);
-    transform: translateY(-1px);
-  }
-
-  /* Cards */
-  .card {
-    height: 100%;
-    background-color: var(--color-brand-surface);
-    border: 1px solid var(--color-brand-border);
-    border-radius: var(--radius-lg);
-    padding: 2rem;
-  }
-
-  .card-hover {
-    transition: border-color 0.2s ease, transform 0.2s ease;
-  }
-
-  .card-hover:hover {
-    border-top-color: var(--color-gold);
-    transform: translateY(-2px);
-  }
-
-  .icon-wrapper {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-md);
-    background: var(--gradient-brand);
   }
 
   /* Divider */
