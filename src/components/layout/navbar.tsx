@@ -43,7 +43,7 @@ export function Navbar() {
             </li>
             <li>
               <a
-                href="#research"
+                href="#"
                 className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
               >
                 Research
@@ -51,7 +51,7 @@ export function Navbar() {
             </li>
             <li>
               <a
-                href="#about"
+                href="#"
                 className="text-brand-text-secondary transition-colors duration-200 hover:text-brand-text"
               >
                 About
@@ -60,7 +60,7 @@ export function Navbar() {
           </ul>
 
           <div className="hidden md:block">
-            <Button href="/request-access">Request Access</Button>
+            <Button href="#">Request Access</Button>
           </div>
         </div>
       </div>

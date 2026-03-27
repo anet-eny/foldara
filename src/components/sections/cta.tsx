@@ -7,7 +7,7 @@ export function CTA() {
   useReveal();
 
   return (
-    <section id="contact" className="section-padding">
+    <section className="section-padding">
       <div className="container-narrow text-center flex flex-col items-center gap-4">
         <p className="label reveal">Get started</p>
         <h2 className="reveal font-heading">
