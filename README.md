@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Foldara — Fictional Biotech Landing Page
 
-## Getting Started
+A landing page for Foldara, a fictional AI-powered protein structure prediction tool, built as a portfolio and learning project.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS v4
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Learnings
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Setting up and navigating a Next.js 15 project with App Router, TypeScript and Tailwind v4
+- Using Cursor IDE and its AI agent effectively — writing focused prompts, providing context via plan.md, and reviewing generated code critically
+- Iterative prototyping workflow: starting from an HTML prototype and converting it section by section into React components
+- Building a design system from scratch — CSS custom properties in `@theme`, utility classes, and a consistent color palette in oklch
+- Component architecture in Next.js — separating sections, layout, and reusable UI components
+- Using Google Fonts via `next/font`, Next.js `Image` component, and semantic HTML
+- Implementing scroll reveal animations with `IntersectionObserver` and extracting reusable logic into a custom React hook (`useReveal`)
+- Understanding when to use globals.css utilities vs. inline Tailwind classes
